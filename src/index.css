@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:wght@300..900&display=swap');
+@import "tailwindcss";
+
+* {
+    font-family: "Winky Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body{
+
+   background: linear-gradient(#7cebf9, #858ef8);
+}
+
+#card{
+
+
+    background: linear-gradient(#028798, #8d49eb);
+}
+#slider{
+    background: linear-gradient(#00130a, #313ba4);  
+}
+
