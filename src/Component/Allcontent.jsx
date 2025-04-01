@@ -65,9 +65,13 @@ function Allcontent() {
             shadow-2xl
             text-white  
              lg:m-10   
-            flex  my-6  mx-2  w-75   lg:mx-89
+            flex  my-6  mx-14  w-75   lg:mx-89
             lg:w-200    h-150 flex-col   
-            justify-center   items-center 
+            justify-center  
+            
+            items-center
+           
+
             p-10 rounded-2xl gap-4"
         >
           <img
