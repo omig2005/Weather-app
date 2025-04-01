@@ -1,7 +1,7 @@
 @import "tailwindcss";
  #root {
   /* background-color: rgb(197, 225, 243); */
-  height: 800px;
+  height: 900px;
 }
 
 @media(max-width:500px){

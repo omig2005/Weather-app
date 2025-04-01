@@ -65,7 +65,7 @@ function Allcontent() {
             shadow-2xl
             text-white  
              lg:m-10   
-            flex  my-6  mx-14  w-75   lg:mx-89
+            flex  my-6  mx-13  w-75   lg:mx-89
             lg:w-200    h-150 flex-col   
             justify-center  
             
