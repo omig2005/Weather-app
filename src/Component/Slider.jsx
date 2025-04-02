@@ -16,7 +16,7 @@ function Slider({ sliderinfo }) {
     <div className="w-full ">
       <ul className="flex gap-7.5  overflow-x-scroll  ">
         {
-          sliderinfo.slice(0,5).map((items, i)=> {
+          sliderinfo.slice(1,6).map((items, i)=> {
             const dayIndex = (index + i) % days.length;
          
 
