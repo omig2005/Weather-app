@@ -8,7 +8,7 @@ export default function NavBar() {
 
   const dispatch = useDispatch();
 
-  const fetchSuggestions = async (input) => {
+  const fetchSuggestions = async (input)=> {
     if (input.length < 4) return; // Avoid unnecessary API calls for short inputs
 
     const url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=a4f742aa0518ba42793659dc421d3b34`;

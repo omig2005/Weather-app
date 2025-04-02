@@ -1,31 +1,42 @@
 import React from "react";
-// import logo from 
+// import logo from
 
-function Slider({sliderinfo}) {
-  return (<div  className="w-full ">
+function Slider({ sliderinfo }) {
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
+  const today = new Date().toUTCString().slice(0, 3);
 
-
-<ul className="flex gap-7.5  overflow-x-scroll  ">
-
- { sliderinfo.map((items)=>
+  console.log(today);
  
-<li id="slider" className="slider123  p-2.5 rounded-2xl"  >
-      <div>
-        <img   src={`https://openweathermap.org/img/wn/${items.weather[0].icon}@2x.png`} alt="loading" />
-      </div>
-      <div>Humi:{items.main.humidity}</div>
+  const index = days.findIndex((day) => day === today);
 
-      <div> {(items.main.temp)}℃</div>
-  
-</li>
+  console.log(index + "Index");
 
- )
+  return (
+    <div className="w-full ">
+      <ul className="flex gap-7.5  overflow-x-scroll  ">
+        {
+          sliderinfo.slice(0,5).map((items, i)=> {
+            const dayIndex = (index + i) % days.length;
+         
 
-}
-</ul>
+            return (
+              <li id="slider" className="slider123  p-2.5 rounded-2xl">
+                <div>
+                  <img
+                    src={`https://openweathermap.org/img/wn/${items.weather[0].icon}@2x.png`}
+                    alt="loading"
+                  />
+                </div>
+                <p>{days[dayIndex]}</p>
 
+                <div>Humi:{items.main.humidity}</div>
 
+                <div> {items.main.temp}℃</div>
+              </li>
+            );
+          })}
+      </ul>
     </div>
   );
 }

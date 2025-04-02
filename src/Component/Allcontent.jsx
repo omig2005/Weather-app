@@ -15,6 +15,19 @@ function Allcontent() {
   }, [search]);
 
 
+
+
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  const today = new Date().toUTCString().slice(0, 3);
+
+  console.log("Day"+today);
+ 
+  const index = days.findIndex((day) => day === today);
+
+  console.log(index + "Index");
+
+
 // console.log(sliderinfo.);
 
   const getData = async () => {
@@ -65,7 +78,7 @@ function Allcontent() {
             shadow-2xl
             text-white  
              lg:m-10   
-            flex  my-6  mx-13  w-75   lg:mx-89
+            flex  my-6  mx-11  w-75   lg:mx-89
             lg:w-200    h-150 flex-col   
             justify-center  
             
@@ -80,6 +93,7 @@ function Allcontent() {
             alt={weather1.weather[0].description}
           />
           <div className="">
+            <h2 className="text-2xl">Day:  {days[index]}</h2>
             <h2 className="text-3xl  font-bold">
               {(weather1.main.temp - 273.5).toFixed(2)}℃
             </h2>
